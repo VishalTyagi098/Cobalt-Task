@@ -26,7 +26,7 @@ const cardStyle = css`
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 315px;
+  width: 300px;
   cursor: pointer;
   position: relative;
   margin-bottom: 1rem;

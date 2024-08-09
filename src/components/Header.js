@@ -22,7 +22,7 @@ const titleStyle = css`
 `;
 
 const heartStyle = css`
-  font-size: 1.5rem;
+  font-size: 1.5em;
   color: red;
   cursor: pointer;
 `;

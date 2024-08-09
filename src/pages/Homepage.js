@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from "@emotion/react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import Header from "../components/Header";
@@ -30,7 +30,7 @@ const formStyle = css`
   align-items: center;
   margin: 0 auto;
   margin-bottom: 1rem;
-  width: 50vw;
+  width: 80vw;
 `;
 
 const searchInputStyle = css`
@@ -131,11 +131,14 @@ const HomePage = () => {
 
     try {
       const response = await axios.get(apiUrl);
+      // Simulate delay
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       setRecipes((prevRecipes) => [...prevRecipes, ...response.data.hits]);
       setNextPageUrl(response.data._links.next?.href || null);
-      setLoading(false);
     } catch (error) {
       console.error("Error fetching recipes:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -164,6 +167,12 @@ const HomePage = () => {
   const handleCloseOverlay = () => {
     setSelectedRecipe(null);
   };
+
+  useEffect(() => {
+    if (query) {
+      fetchRecipes();
+    }
+  }, [query]);
 
   return (
     <div>
