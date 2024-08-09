@@ -1,70 +1,69 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Recipe App
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+The Recipe App allows users to search for recipes using the Edamam API. Users can view recipe details, save recipes to a favorites list, and interact with a sidebar that displays their favorite recipes.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Search Recipes:** Users can search for recipes by entering keywords.
+- **View Recipes:** Display a list of recipes with images and titles.
+- **Favorite Recipes:** Add recipes to a favorites list.
+- **Sidebar:** View and interact with favorite recipes from a sidebar.
+- **Recipe Details:** Click on a recipe to view detailed information in an overlay card.
+- **Responsive Design:** The application is designed to be mobile-friendly and responsive.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Pictures
+![image](https://github.com/user-attachments/assets/85ce58fa-1445-43c6-aa26-9992b6aa3cb4)
+![image](https://github.com/user-attachments/assets/26f2e442-7000-4849-9045-1cdb3c0ba153)
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
 
-### `npm run build`
+   ```bash
+   git clone https://github.com/yourusername/recipe-app.git
+   cd recipe-app
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Create a `.env` file in the root directory and add your Edamam API credentials:
 
-### `npm run eject`
+   ```plaintext
+   REACT_APP_EDAMAM_APP_ID=your_app_id
+   REACT_APP_EDAMAM_APP_KEY=your_app_key
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Start the development server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Search for Recipes:**
+   - Enter a keyword in the search input field and click "Search".
+   - Recipe cards will appear with images and titles.
 
-## Learn More
+2. **View Recipe Details:**
+   - Click on a recipe card to open an overlay with more details about the recipe.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Add to Favorites:**
+   - Recipes can be added to the favorites list by clicking the "Favorite" button on the recipe card.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. **View Favorites:**
+   - Click the sidebar toggle button to view and interact with your list of favorite recipes.
 
-### Code Splitting
+5. **Load More Recipes:**
+   - Click the "Load More" button to fetch additional recipes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Acknowledgements
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Edamam API](https://developer.edamam.com/)
